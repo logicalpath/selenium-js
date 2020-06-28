@@ -19,7 +19,7 @@ export default class LoginPage extends BasePage {
     console.log(stepDetail);
     const isDisplayed = await this.waitForIsDisplayed(
       LOGIN_FORM,
-      30000,
+      3000,
       "Login form not displayed."
     );
 
@@ -37,7 +37,7 @@ export default class LoginPage extends BasePage {
 
     const isDashboard = await this.waitForIsDisplayed(
       SUCCESS_MESSAGE,
-      30000,
+      3000,
       "Success message not displayed."
     );
     return isDashboard;
@@ -47,7 +47,7 @@ export default class LoginPage extends BasePage {
     console.log(stepDetail);
     const isFailure = await this.waitForIsDisplayed(
       FAILURE_MESSAGE,
-      30000,
+      3000,
       "Failure message not displayed."
     );
     return isFailure;
