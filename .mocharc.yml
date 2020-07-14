@@ -1,0 +1,5 @@
+reporter: mochawesome
+reporter-options:
+  - reportDir=artifacts/reports
+  - assetsDir=artifacts/reports/assets
+  - code=false
