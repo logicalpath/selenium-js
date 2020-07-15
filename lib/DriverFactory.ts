@@ -45,7 +45,7 @@ DriverFactory.prototype.build = async function () {
     case "firefox":
       // TODO enable logging for firefox
       options = new firefox.Options();
-      options.addArguments("-headless");
+      // options.addArguments("-headless");
       this.driver = new selenium.Builder()
         .forBrowser(config.browser)
         .setFirefoxOptions(options)
