@@ -4,8 +4,8 @@ These scripts run against a local install of Dave Haeffner's [the-internet](http
 
 ## Intalling the project
 
-- clone the project `git clone git@github.com:logicalpath/selenium-ruby.git`
-- cd to root directory of project (selenium-ruby)
+- clone the project `git clone git@github.com:logicalpath/selenium-js.git`
+- cd to root directory of project (selenium-js)
 - run `npm install`
 
 Environment Variables that can be set at runtime:
