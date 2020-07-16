@@ -3,8 +3,12 @@ import { assert } from "chai";
 import LoginPage from "../pages/LoginPage";
 import { getDriver, quitDriver } from "./BaseTest";
 import { addContext } from "mochawesome/addContext";
-const USER_NAME = "tomsmith";
-const USER_PWD = "SuperSecretPassword!";
+import * as dotenv from "dotenv";
+import { addConsoleHandler } from "selenium-webdriver/lib/logging";
+
+dotenv.config();
+const USER_NAME = process.env.TIUser;
+const USER_PWD = process.env.TIPass;
 
 describe("Login", function () {
   this.timeout(0);
