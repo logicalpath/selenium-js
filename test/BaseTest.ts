@@ -3,7 +3,6 @@
 import * as fs from "fs";
 import * as webDriver from "selenium-webdriver";
 import DriverFactory from "../lib/DriverFactory";
-import { Driver } from "selenium-webdriver/chrome";
 
 let driver: webDriver.WebDriver;
 let driverFactory: { driver: webDriver.WebDriver; quit: () => void };

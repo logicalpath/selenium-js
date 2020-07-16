@@ -6,8 +6,9 @@ import { addContext } from "mochawesome/addContext";
 import * as dotenv from "dotenv";
 import { addConsoleHandler } from "selenium-webdriver/lib/logging";
 
-const USER_NAME = "tomsmith";
-const USER_PWD = "SuperSecretPassword!";
+dotenv.config();
+const USER_NAME = process.env.TIUser;
+const USER_PWD = process.env.TIPass;
 
 describe("Login", function () {
   this.timeout(0);
@@ -25,10 +26,6 @@ describe("Login", function () {
     this.retries(3);
     //  addContext(this, "This is addContext from login");
     //  fails:  TypeError: addContext_1.addContext is not a function
-    const myenv = dotenv.config();
-    console.log(myenv);
-    const myvar = process.env.myvar;
-    console.log(myvar);
 
     const formDisplayed = await login.formLoaded(
       "From LoginTest: Check that the login form is loaded"
